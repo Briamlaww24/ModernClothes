@@ -58,3 +58,15 @@ python3 ModernClothes.py
 ## Autor
 
 Proyecto desarrollado como práctica de programación en python por Briam el mas pro.
+
+## Imagenes
+
+![Menu Inicial:](Imagenes/Screenshot%20from%202026-07-03%2015-13-03.png)
+
+![Menu Principal:](Imagenes/Screenshot%20from%202026-07-03%2015-13-36.png)
+
+![Menu de Prendas:](Imagenes/Screenshot%20from%202026-07-03%2015-13-47.png)
+
+![Datos de pago:](Imagenes/Screenshot%20from%202026-07-03%2015-17-04.png)
+
+![Menu Final:](Imagenes/Screenshot%20from%202026-07-03%2015-17-58.png)

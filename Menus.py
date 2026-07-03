@@ -101,8 +101,8 @@ def Menu_pantalones(Shorts, Factura):
 
 def Menu_salir():
     print('|================================================|')
-    print('**********Sus operaciones han finalizado********* ')
-    print('**************Gracias por Visitarnos*************')
+    print(' *********Sus operaciones han finalizado********* ')
+    print(' *************Gracias por Visitarnos************* ')
     print('|================================================|')
     time.sleep(3)
 
@@ -142,11 +142,11 @@ def Menu_Factura(Factura):
     print('|================================================|')
     print(' *************Su factura es de:****************** ')
     time.sleep(0.3)
-    print(f'****************** {Factura}.00$ ****************')
+    print(f' ***************** {Factura}.00$ *************** ')
     print('|================================================|')
     time.sleep(0.5)
     Continuar = questionary.select(
-        "¿Desea completar la compra?:",
+        " ¿Desea completar la compra?:",
         choices=["Si", "No"],
         instruction="(Use ↑↓ para seleccionar y presione Enter)"
     ).ask()
@@ -157,8 +157,8 @@ def Menu_Factura(Factura):
 def Completar_compra():
     while True:
         os.system('clear')
-        print( '|==================================================|')
-        print('Perfecto Ingrese los siguientes datos para confirmar:')
+        print('|===================================================|')
+        print(' Perfecto Ingrese los siguientes datos para confirmar:')
         print('|===================================================|')
         time.sleep(0.3)
         print('|***************************************************|')
@@ -167,6 +167,14 @@ def Completar_compra():
         print('|***************************************************|')  
         print('2.Numero de Celular:')
         NummCell = prompt(history=Historial)
+        
+        if len(NummCell) != 10 or not NummCell.isdigit():
+            print('|===================================================|')
+            print('Error: El numero de celular debe tener 10 digitos y solo contener numeros.')
+            print('|===================================================|')
+            time.sleep(1)
+            continue
+        
         print('|***************************************************|')
         print('3.Direccion de Envio:')
         DirecEnvio = prompt(history=Historial)
@@ -181,7 +189,7 @@ def Completar_compra():
         print(f'Direccion: {DirecEnvio}')
         print('|===================================================|')
         print('Si cometio algun tipo de error al ingresar los datos puede cambiarlo ahora.')
-        print('¿Desea modificar la informacion ingresada?:')
+        print(' ¿Desea modificar la informacion ingresada?:')
         print('|===================================================|')
         ConfDatos = questionary.select(
             "",
@@ -194,9 +202,9 @@ def Completar_compra():
             os.system('clear')
             time.sleep(0.3)
             print('|===========================================================================|')
-            print(f'Perfecto, {Nombre} su pedido llegara en un plazo de:')
+            print(f' Perfecto, {Nombre} su pedido llegara en un plazo de:')
             print(' - 3 a 5 dias habiles, a su direccion:', DirecEnvio)
-            print('Cualquier notificacion o inconveniente se le comunicara a su numero:', NummCell)
+            print(' Cualquier notificacion o inconveniente se le comunicara a su numero:', NummCell)
             print('|===========================================================================|')
             time.sleep(0.3)
             print('Presione Enter para finalizar su compra y salir del sistema...')
@@ -207,7 +215,7 @@ def Reinicio_del_Carrito(Factura):
     os.system('clear')
     time.sleep(0.3)
     print('|===================================================|')
-    print('Desea vaciar su carrito y volver al menu principal:')
+    print(' Desea vaciar su carrito y volver al menu principal:')
     print('|===================================================|')
     Respuesta = questionary.select(
         "",
